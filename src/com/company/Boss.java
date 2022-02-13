@@ -1,29 +1,17 @@
 package com.company;
 
-public class Boss {
-    private int health;
-    private int damage;
-    private String defenseType;
+public class Boss extends GameEntity {
+    Weapon oruzhie = new Weapon();
 
-    public int getHealth() {
-        return health;
-    }
-    public void setHealth(int health) {
-        this.health = health;
-
+    public Weapon getOruzhie() {
+        return oruzhie;
     }
 
-    public int getDamage() {
-        return damage;
+    public void setOruzhie(Weapon oruzhie) {
+        this.oruzhie = oruzhie;
     }
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
-    public String getDefenseType() {
-        return defenseType;
-    }
-    public void setDefenseType(String defenseType) {
-        this.defenseType = defenseType;
+    public String info(){
+        return this.oruzhie.getSword() + " Health " + getHealth() +
+                " Damage: " +  getDamage();
     }
 }

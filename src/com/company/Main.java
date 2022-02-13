@@ -8,21 +8,27 @@ public class Main {
         Boss boss = new Boss();
         boss.setHealth(800);
         boss.setDamage(50);
-        boss.setDefenseType("Magic");
-        System.out.println("Health: " + boss.getHealth() + " Damage: " +
-                boss.getDamage() + " Defense Type: "
-                + boss.getDefenseType());
-        Hero[] heroes = createHeroes();
-        for (Hero hero:heroes) {
-            System.out.println(hero.getHealth()+ " " + hero.getDamage() + " " + hero.getAbility());
-        }
+        boss.oruzhie.setSteelArms("amongus");
+        boss.oruzhie.setSword("Sword");
+        /*System.out.println("Armor: " + boss.oruzhie.getSteelArms() + " Weapon: " + boss.oruzhie.getSword() + " Health: "
+                + boss.getHealth() +
+                " Damage: " + boss.getDamage());*/
+        System.out.println("Boss: " + boss.info());
+
+        Skeleton skeleton = new Skeleton();
+        skeleton.setHealth(200);
+        skeleton.setDamage(20);
+        skeleton.setArrow(10);
+        skeleton.oruzhie.setSword("Onion");
+        System.out.println("Skeleton: " + skeleton.info() + " Arrows: " + skeleton.getArrow() );
+
+        Skeleton skeleton1 = new Skeleton();
+        skeleton1.setHealth(200);
+        skeleton1.setDamage(20);
+        skeleton1.setArrow(10);
+        skeleton1.oruzhie.setSword("Onion");
+        System.out.println("Skeleton1: " + skeleton1.info() + " Arrows: " + skeleton1.getArrow());
     }
-    public static Hero[] createHeroes(){
-        Hero c1 = new Hero(200, 20, "ability");
-        Hero c2 = new Hero(250, 20);
-        Hero c3 = new Hero(300, 15, "ability");
-        Hero[] heroes = {c1, c2, c3};
-        System.out.println();
-        return heroes;
-    }
+
+
 }
